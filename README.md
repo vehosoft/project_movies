@@ -1,8 +1,15 @@
 # project_movies
 Proyecto de Sitio Web de Reseñas Peliculas con Panel de Administracion y API REST
 
-Panel de Administracion
+Panel de Administracion: Administra los registros de Peliculas por usuarios STTAF
+
 ![PanelAdmin](/static/img/PanelAdmin.png "PanelAdmin")
+
+
+Sitio Web: Muestra peliculas, reseñas y comentarios, permite el registro de comentarios de 
+usuarios autenticados 
+
+![SitioWeb](/static/img/SitioWeb.png "SitioWeb")
 
 ### Lenguajes
 * Python 3
