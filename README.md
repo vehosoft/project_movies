@@ -1,6 +1,9 @@
 # project_movies
 Proyecto de Sitio Web de Reseñas Peliculas con Panel de Administracion y API REST
 
+Panel de Administracion
+![PanelAdmin](/static/img/PanelAdmin.png "PanelAdmin")
+
 ### Lenguajes
 * Python 3
 * SQLite
