@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Panel administrador de peliculas">
+    <meta name="author" content="Francisco Rodriguez">
+    <title>Panel Administrador</title>
+    <!-- Styles -->
+    <link href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'node_modules/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+    <div id="app">
+        <header class="app-header navbar">
+            <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="{% static 'img/brand/profile.jpg' %}" class="img-avatar" alt="img-avatar">
+                        <span class="d-md-down-none">{{ user_name }} </span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-center">
+                            <strong>Cuenta</strong>
+                        </div>
+                        <a class="dropdown-item" href="#" onClick="document.getElementById('logoutform').submit()"><i class="fa fa-lock"></i> Cerrar sesión</a>
+                    </div>
+
+                    <form id="logoutform" method="POST" action="{% url 'mgm:logout' %}">
+                        {% csrf_token %}
+                        <input type="hidden">
+                    </form>
+                </li>
+            </ul>
+        </header>
+
+        <div class="app-body">
+            {% include 'sidebar.html' %}
+
+            <!-- Contenido -->
+            {% block content %}
+            {% endblock%}
+            <!-- /Fin del contenido -->
+        </div>
+
+    </div>
+
+    <footer class="app-footer">
+        <span><a href="http://www.vehosoft.com/">FRM</a> &copy; 2018</span>
+        <span class="ml-auto">Desarrollado por <a href="http://www.vehosoft.com/">Francisco Rodriguez</a></span>
+    </footer>
+
+    <!-- Necessary plugins-->
+    <script src="{% static 'node_modules/jquery/dist/jquery.min.js' %}"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'node_modules/pace-progress/pace.min.js' %}"></script>
+    <!-- Plugins and scripts required by all views -->
+    <script src="{% static 'node_modules/chart.js/dist/Chart.min.js' %}"></script>
+    <script src="{% static 'node_modules/vue/dist/vue.min.js' %}"></script>
+    <script src="{% static 'node_modules/axios/dist/axios.min.js' %}"></script>
+    <script src="{% static 'node_modules/sweetalert2/dist/sweetalert2.all.min.js' %}"></script>
+    <script src="{% static 'node_modules/qs/dist/qs.js' %}"></script>
+    <!-- GenesisUI main scripts -->
+    <script src="{% static 'js/template.js' %}"></script>
+    <script src="{% static 'management/app.js' %}"></script>
+
+</body>
+
+</html>

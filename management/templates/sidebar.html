@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item" @click="menu=0">
+                <a class="nav-link" :class="[menu == 0 ? 'active':'']" href="main.html"><i class="fa fa-film"></i> Peliculas</a>
+            </li>
+            <li class="nav-title">
+                Administracion
+            </li>
+            <li class="nav-item" @click="menu=1">
+                <a class="nav-link" :class="[menu == 1 ? 'active':'']" href="main.html"><i class="icon-people"></i> Usuarios</a>
+            </li>
+        </ul>
+    </nav>
+    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+</div>

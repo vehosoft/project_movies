@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<template v-if="menu==0">
+  <pelicula></pelicula>
+</template>
+<template v-if="menu==1">
+ {% include 'usuarios.html' %}
+</template>
+{% endblock%}
