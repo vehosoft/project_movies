@@ -49,6 +49,7 @@ Setup
 ```
 $ python3.x -m venv env
 $ source env/bin/activate
+$ pip install --upgrade pip
 $ pip install -r requirements.txt
 $ cd static
 $ npm install
@@ -61,4 +62,12 @@ $ cd ..
 ```
 $ python manage.py runserver
 ```
+## Accesos
 
+[Web Site](http://localhost:8000/)
+
+[Panel de Administracion](http://localhost:8000/mgm)
+
+Super Usuario
+* username: frodriguez@vehosoft.com
+* password: 123
